@@ -49,6 +49,9 @@
         "price": "0",
         "priceCurrency": "USD"
       },
+      "sameAs": [
+        "https://www.facebook.com/ibkar.application"
+      ],
       "description": "تطبيق إسلامي متكامل لمواقيت الصلاة الدقيقة، والأذكار اليومية، والمسبحة الإلكترونية. يعمل بالكامل بدون إنترنت وبدون أي إعلانات مزعجة."
     }
     </script>
@@ -102,9 +105,15 @@
                 </svg>
                 <span class="brand-text">إِبْكَـار</span>
             </a>
-            <a href="https://github.com/moalmaz11/Zad-App/releases/download/v1.0/zad-v1.0.apk" class="btn-download hidden-mobile" aria-label="تحميل تطبيق إبكار APK">
-                <i class="fa-solid fa-download"></i> تحميل الآن
-            </a>
+            
+            <div style="display: flex; align-items: center; gap: 15px;">
+                <a href="https://www.facebook.com/ibkar.application" target="_blank" rel="noopener noreferrer" class="social-nav-link" aria-label="صفحة إبكار على فيسبوك" style="color: #94A3B8; font-size: 20px; transition: color 0.2s ease;">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+                <a href="https://github.com/moalmaz11/Zad-App/releases/download/v1.0/zad-v1.0.apk" class="btn-download hidden-mobile" aria-label="تحميل تطبيق إبكار APK">
+                    <i class="fa-solid fa-download"></i> تحميل الآن
+                </a>
+            </div>
         </div>
     </nav>
 
@@ -162,7 +171,7 @@
                             <circle cx="256" cy="265" r="150" fill="url(#heroGlow)"/>
                             <circle cx="256" cy="255" r="50" fill="url(#heroGold)"/>
                             <path d="M 120 345 C 190 380, 322 380, 392 345" fill="none" stroke="url(#heroGold)" stroke-width="12" stroke-linecap="round"/>
-                            <path d="M 256 105 C 285 170, 360 210, 360 280 C 360 335, 315 375, 256 375 C 197 375, 152 335, 152 280 C 152 210, 227 170, 256 105 Z" fill="none" stroke="url(#heroEmerald)" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M 256 105 C 285 170, 360 210, 360 280 C 360 335, 315 375, 256 375 C 197 375, 152 335, 152 280 C 152 210, 227 170, 256 105 Z" fill="none" stroke="url(#navEmerald)" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
                             <circle cx="256" cy="85" r="8" fill="#FDE68A"/>
                         </svg>
                     </div>
@@ -230,7 +239,7 @@
 
     <!-- الفوتر -->
     <footer class="footer">
-        <div class="container footer-content">
+        <div class="container footer-content" style="display: flex; flex-direction: column; align-items: center; gap: 16px;">
             <div class="footer-logo" style="display: flex; align-items: center; gap: 10px;">
                 <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" style="width: 28px; height: 28px; border-radius: 6px;">
                     <defs>
@@ -258,7 +267,15 @@
                 </svg>
                 <span>إِبْكَـار</span>
             </div>
-            <p class="copyright">جميع الحقوق محفوظة &copy; 2026. طُور بحب وعناية.</p>
+            
+            <!-- روابط التواصل الاجتماعي والصفحة الرسمية -->
+            <div class="footer-social" style="display: flex; align-items: center; gap: 12px;">
+                <a href="https://www.facebook.com/ibkar.application" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 8px; color: #10B981; text-decoration: none; font-size: 15px; font-weight: 600; padding: 6px 14px; background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.2); border-radius: 20px;">
+                    <i class="fa-brands fa-facebook" style="font-size: 18px;"></i> تابعنا على فيسبوك
+                </a>
+            </div>
+
+            <p class="copyright" style="margin: 0;">جميع الحقوق محفوظة &copy; 2026. طُور بحب وعناية.</p>
         </div>
     </footer>
 
