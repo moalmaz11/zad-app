@@ -3,118 +3,188 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>زادُ الخَيْر | رفيقك الإيماني</title>
+    <title>زادُ الخَيْر - رفيقك الإيماني الذكي</title>
     
-    <!-- خطوط جوجل -->
+    <!-- خط Tajawal -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&display=swap" rel="stylesheet">
     
-    <!-- مكتبة الأيقونات -->
+    <!-- FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <!-- ملف التصميم -->
+    <!-- ملف الاستايل -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+    <!-- الخلفيات العصرية -->
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+
     <!-- شريط التنقل -->
-    <nav class="navbar">
-        <div class="container nav-wrap">
-            <a href="#" class="brand">
-                <img src="logo.png" alt="شعار زاد الخير" class="logo-img">
-                <span class="brand-name">زادُ الخَيْر</span>
+    <header class="header">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <img src="logo.png" alt="شعار زاد الخير">
+                <span>زادُ الخَيْر</span>
             </a>
-            <a href="https://github.com/moalmaz11/Zad-App/releases/download/v1.0/zad-v1.0.apk" class="nav-btn">
+            <a href="https://github.com/moalmaz11/Zad-App/releases/download/v1.0/zad-v1.0.apk" class="btn-download-sm hidden-mobile">
                 تحميل التطبيق
             </a>
         </div>
-    </nav>
-
-    <!-- القسم الرئيسي -->
-    <header class="hero">
-        <div class="container hero-grid">
-            <div class="hero-content">
-                <div class="tagline">الإصدار 1.0 متاح الآن</div>
-                <h1 class="hero-title">نظّم يومك،<br>وحافظ على طاعتك.</h1>
-                <p class="hero-desc">تطبيقك الإسلامي المتكامل. يجمع لك مواقيت الصلاة، الأذكار، والمسبحة في واجهة واحدة هادئة، دقيقة، وخالية تماماً من الإعلانات.</p>
-                
-                <div class="hero-actions">
-                    <a href="https://github.com/moalmaz11/Zad-App/releases/download/v1.0/zad-v1.0.apk" class="btn btn-primary">
-                        <i class="fa-brands fa-android"></i>
-                        تحميل مباشر للأندرويد
-                    </a>
-                </div>
-                <div class="trust-indicators">
-                    <span><i class="fa-solid fa-check-circle"></i> مجاني 100%</span>
-                    <span><i class="fa-solid fa-check-circle"></i> يعمل بدون إنترنت</span>
-                </div>
-            </div>
-            
-            <div class="hero-visual">
-                <!-- يفضل مستقبلاً وضع صورة لشاشة التطبيق من الداخل هنا بدلاً من اللوجو -->
-                <img src="logo.png" alt="واجهة تطبيق زاد الخير" class="app-showcase">
-            </div>
-        </div>
     </header>
 
-    <!-- قسم المميزات -->
-    <section class="features">
-        <div class="container">
-            <div class="section-head">
-                <h2>كل ما تحتاجه في مكان واحد</h2>
-                <p>صُمم تطبيق "زاد" بأحدث التقنيات ليوفر لك تجربة سلسة وسريعة</p>
+    <!-- القسم الافتتاحي (Hero) -->
+    <section class="hero">
+        <div class="container hero-content">
+            <div class="version-badge reveal">🚀 الإصدار V1.0 متاح الآن لنظام Android</div>
+            <h1 class="reveal delay-1">ارتقِ بعباداتك اليومية<br><span class="highlight">بتقنية عصرية وواجهة نقية</span></h1>
+            <p class="hero-desc reveal delay-2">
+                "زادُ الخَيْر" ليس مجرد تطبيق لمواقيت الصلاة، بل هو نظام متكامل صُمم بعناية فائقة لمساعدتك على بناء عادات إيمانية مستدامة. واجهة تتفاعل مع وقتك، وقاعدة بيانات سريعة تحفظ تقدمك، وتجربة خالية تماماً من المشتتات.
+            </p>
+            <div class="hero-actions reveal delay-3">
+                <a href="https://github.com/moalmaz11/Zad-App/releases/download/v1.0/zad-v1.0.apk" class="btn-primary-large">
+                    <i class="fa-brands fa-android"></i> تحميل بصيغة APK (16MB)
+                </a>
             </div>
-            
-            <div class="features-grid">
-                
-                <div class="feature-card">
-                    <div class="icon-box"><i class="fa-regular fa-clock"></i></div>
-                    <h3>مواقيت دقيقة</h3>
-                    <p>عد تنازلي تفاعلي للصلاة القادمة مع واجهة تتغير ألوانها تلقائياً لتتناسب مع أوقات اليوم (شروق، نهار، ليل).</p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="icon-box"><i class="fa-solid fa-book-open"></i></div>
-                    <h3>أذكار الصباح والمساء</h3>
-                    <p>قراءة مريحة للعين مع انتقال ذكي وحساب تلقائي لعدد مرات القراءة لضمان تركيزك في الذكر.</p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="icon-box"><i class="fa-solid fa-chart-simple"></i></div>
-                    <h3>تتبع الالتزام</h3>
-                    <p>نظام استمرارية (Streaks) مبني على قاعدة بيانات محلية لتشجيعك وتحفيزك على المواظبة اليومية.</p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="icon-box"><i class="fa-solid fa-fingerprint"></i></div>
-                    <h3>مسبحة حسية</h3>
-                    <p>عداد رقمي واسع يوفر اهتزازات خفيفة (Haptic Feedback) لتجربة تسبيح واقعية بدون تشتيت.</p>
-                </div>
-
+            <div class="hero-image-wrapper reveal delay-4">
+                <!-- يمكنك استبدال هذه الصورة لاحقاً بلقطة شاشة للتطبيق -->
+                <img src="logo.png" alt="واجهة زاد الخير" class="hero-image">
             </div>
         </div>
     </section>
 
-    <!-- قسم التحميل النهائي -->
-    <section class="cta-section">
+    <!-- قسم الشرح التفصيلي (Feature Highlight) -->
+    <section class="feature-highlight">
         <div class="container">
-            <div class="cta-box">
-                <h2>ابدأ رحلتك مع "زاد" اليوم</h2>
-                <p>انضم واستمتع بتجربة إيمانية متكاملة مصممة خصيصاً لراحتك.</p>
-                <a href="https://github.com/moalmaz11/Zad-App/releases/download/v1.0/zad-v1.0.apk" class="btn btn-gold">
-                    تحميل التطبيق الآن (APK)
+            <div class="split-layout">
+                <div class="text-side reveal">
+                    <h2>لماذا يختلف "زادُ الخَيْر"؟</h2>
+                    <p>في عصر مليء بالتطبيقات المزدحمة بالإعلانات والنوافذ المنبثقة، صممنا "زاد" ليكون الملاذ الهادئ. اعتمدنا على تقنيات تطوير متقدمة وقواعد بيانات محلية (Room DB) لضمان أن التطبيق يعمل بكفاءة قصوى حتى بدون اتصال بالإنترنت.</p>
+                    <ul class="check-list">
+                        <li><i class="fa-solid fa-circle-check"></i> استقلالية تامة عن الإنترنت للحفاظ على تركيزك.</li>
+                        <li><i class="fa-solid fa-circle-check"></i> خصوصية كاملة، بياناتك وأذكارك تُحفظ على هاتفك فقط.</li>
+                        <li><i class="fa-solid fa-circle-check"></i> تصميم مدروس لتقليل إجهاد العين أثناء القراءة الطويلة.</li>
+                    </ul>
+                </div>
+                <div class="image-side reveal delay-2">
+                    <div class="glass-card">
+                        <div class="glass-icon"><i class="fa-solid fa-shield-heart"></i></div>
+                        <h3>أمان وطمأنينة</h3>
+                        <p>تطبيق نظيف برمجياً، لا يتتبع نشاطك ولا يستهلك بطارية هاتفك في الخلفية دون داعٍ.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم الخدمات (Bento Grid) -->
+    <section class="services">
+        <div class="container">
+            <div class="section-title reveal">
+                <h2>أدواتك اليومية، مصممة باحترافية</h2>
+                <p>اكتشف الخصائص التي تجعل من "زاد" رفيقك الدائم</p>
+            </div>
+            
+            <div class="bento-grid">
+                <!-- كارت 1 -->
+                <div class="bento-item item-large reveal">
+                    <div class="bento-icon"><i class="fa-solid fa-clock"></i></div>
+                    <h3>مواقيت صلاة ديناميكية</h3>
+                    <p>لا يكتفي التطبيق بعرض الأوقات بدقة، بل تتفاعل الواجهة بصرياً مع حالة السماء. ستلاحظ تغير الألوان لتعكس الشروق، الغروب، أو الليل، مع عد تنازلي دقيق ولحظي للصلاة القادمة لإبقائك متأهباً.</p>
+                </div>
+                <!-- كارت 2 -->
+                <div class="bento-item reveal delay-1">
+                    <div class="bento-icon"><i class="fa-solid fa-book-open-reader"></i></div>
+                    <h3>أذكار بانتقال ذكي</h3>
+                    <p>تجربة قراءة أذكار الصباح والمساء لم تكن بهذه السهولة. التطبيق يحسب مرات التكرار تلقائياً وينقلك للذكر التالي فور الانتهاء.</p>
+                </div>
+                <!-- كارت 3 -->
+                <div class="bento-item reveal delay-2">
+                    <div class="bento-icon"><i class="fa-solid fa-chart-line"></i></div>
+                    <h3>تتبع الالتزام (Streaks)</h3>
+                    <p>نظام تحفيزي قوي يسجل أيام التزامك بالصلوات والأذكار، مما يشجعك على الحفاظ على سلسلتك الإيمانية وعدم الانقطاع.</p>
+                </div>
+                <!-- كارت 4 -->
+                <div class="bento-item item-wide reveal">
+                    <div class="bento-icon"><i class="fa-solid fa-fingerprint"></i></div>
+                    <h3>مسبحة إلكترونية بتفاعلات حسية (Haptic)</h3>
+                    <p>انسَ الحاجة للنظر إلى الشاشة أثناء الاستغفار. المسبحة المدمجة توفر اهتزازات خفيفة ومريحة مع كل ضغطة، لتضمن تركيزك التام في التسبيح مع حفظ تلقائي لتقدمك في أي وقت تخرج فيه من التطبيق.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم الأسئلة الشائعة (FAQ) -->
+    <section class="faq">
+        <div class="container">
+            <div class="section-title reveal">
+                <h2>أسئلة متكررة</h2>
+                <p>كل ما تود معرفته عن تطبيق زادُ الخَيْر</p>
+            </div>
+            <div class="faq-grid reveal delay-1">
+                <div class="faq-card">
+                    <h4>هل التطبيق يحتوي على إعلانات؟</h4>
+                    <p>إطلاقاً. تطبيق زادُ الخَيْر مصمم ليكون لوجه الله، لا يحتوي على أي إعلانات مزعجة قد تقطع خشوعك أو تشتت انتباهك.</p>
+                </div>
+                <div class="faq-card">
+                    <h4>هل أحتاج للإنترنت لاستخدامه؟</h4>
+                    <p>تحتاج للإنترنت مرة واحدة فقط لتحديد موقعك وضبط مواقيت الصلاة، بعدها يعمل التطبيق بالكامل بكفاءة تامة بدون إنترنت (Offline).</p>
+                </div>
+                <div class="faq-card">
+                    <h4>ما حجم التطبيق؟ وهل يستهلك مساحة؟</h4>
+                    <p>حجم ملف التثبيت (APK) هو 16 ميجابايت فقط، وهو محسّن برمجياً ليكون خفيفاً جداً على جميع أجهزة الأندرويد.</p>
+                </div>
+                <div class="faq-card">
+                    <h4>كيف أحفظ تقدمي في المسبحة؟</h4>
+                    <p>لا تقلق، التطبيق يستخدم قواعد بيانات محلية ذكية تحفظ عدد التسبيحات والأذكار تلقائياً حتى لو أغلقت التطبيق فجأة.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم التحميل النهائي (CTA) -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-banner reveal">
+                <h2>جاهز لتغيير روتينك؟</h2>
+                <p>انضم الآن واجعل "زاد" الأداة التي تعينك على طاعتك كل يوم.</p>
+                <a href="https://github.com/moalmaz11/Zad-App/releases/download/v1.0/zad-v1.0.apk" class="btn-primary-large">
+                    <i class="fa-solid fa-download"></i> حمل التطبيق مجاناً
                 </a>
+                <p class="cta-note">متوافق مع أجهزة أندرويد فقط</p>
             </div>
         </div>
     </section>
 
     <!-- الفوتر -->
-    <footer class="footer">
-        <div class="container">
-            <p>جميع الحقوق محفوظة © 2026 — تطبيق زادُ الخَيْر</p>
+    <footer>
+        <div class="container footer-container">
+            <div class="footer-logo">زادُ الخَيْر</div>
+            <p>جميع الحقوق محفوظة © 2026. طُور بحب وعناية.</p>
         </div>
     </footer>
 
+    <!-- سكريبت الحركات التفاعلية (Scroll Animations) -->
+    <script>
+        function revealElements() {
+            var reveals = document.querySelectorAll('.reveal');
+            var windowHeight = window.innerHeight;
+            
+            for (var i = 0; i < reveals.length; i++) {
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                // العنصر يظهر عندما يدخل مساحة الشاشة بـ 80 بيكسل
+                var elementVisible = 80;
+                
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add('active');
+                }
+            }
+        }
+        
+        window.addEventListener('scroll', revealElements);
+        revealElements(); // تشغيل الدالة فور تحميل الصفحة
+    </script>
 </body>
 </html>
