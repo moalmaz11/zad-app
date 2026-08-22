@@ -1,216 +1,349 @@
-/* إعدادات عامة وتناسق الألوان */
+/* المتغيرات (الألوان الأساسية والمسافات) */
+:root {
+    --primary: #0A9396; /* أخضر زمردي/Teal */
+    --primary-dark: #005F73;
+    --secondary: #94D2BD;
+    --bg-color: #F8F9FA;
+    --surface: #FFFFFF;
+    --text-main: #1A1A24;
+    --text-light: #5A5A66;
+    --radius-md: 16px;
+    --radius-lg: 24px;
+    --shadow-sm: 0 4px 15px rgba(0,0,0,0.03);
+    --shadow-lg: 0 20px 40px rgba(0,0,0,0.06);
+    --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* الإعدادات العامة */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Cairo', sans-serif;
+    font-family: 'Tajawal', sans-serif;
 }
 
 body {
-    background-color: #f4f7f5;
-    color: #2d3748;
-    line-height: 1.7;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    line-height: 1.8;
+    -webkit-font-smoothing: antialiased;
 }
 
-.container {
-    width: 85%;
+/* شريط التنقل (Header) */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    z-index: 1000;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.nav-container {
     max-width: 1200px;
     margin: 0 auto;
-}
-
-/* الهيدر */
-header {
-    background-color: #ffffff;
-    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02);
-    padding: 15px 0;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-}
-
-.navbar {
+    padding: 16px 24px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.logo {
+.logo-area {
     display: flex;
     align-items: center;
-    gap: 12px;
-    font-size: 26px;
-    font-weight: 700;
-    color: #047857; /* أخضر زمردي عميق */
-}
-
-.logo-img {
-    height: 40px;
-    border-radius: 8px;
-}
-
-.btn-nav {
-    background-color: #047857;
-    color: white;
+    gap: 16px;
     text-decoration: none;
-    padding: 8px 22px;
-    border-radius: 8px;
-    font-weight: 600;
-    transition: 0.3s;
 }
 
-.btn-nav:hover {
-    background-color: #065f46;
+.logo-area img {
+    width: 48px;
+    border-radius: 14px;
+    box-shadow: var(--shadow-sm);
 }
 
-/* القسم الرئيسي (Hero) */
-.hero {
-    background: linear-gradient(135deg, #e6f4ea 0%, #f0fdfa 100%);
-    padding: 60px 0 90px 0;
-    text-align: center;
+.logo-text {
+    color: var(--primary-dark);
+    font-weight: 800;
+    font-size: 1.6rem;
+    letter-spacing: -0.5px;
 }
 
-.hero-logo {
-    width: 120px;
-    height: 120px;
-    border-radius: 25px;
-    margin-bottom: 25px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
-}
-
-.hero-content h1 {
-    font-size: 38px;
-    color: #065f46;
-    margin-bottom: 20px;
-    font-weight: 700;
-}
-
-.hero-content p {
-    font-size: 18px;
-    color: #4a5568;
-    max-width: 750px;
-    margin: 0 auto 35px auto;
-}
-
-/* زرار التحميل */
-.download-buttons {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 15px;
-}
-
-.btn-download {
-    background-color: #10b981; 
-    color: white;
+.btn-outline {
+    padding: 12px 28px;
+    border: 2px solid var(--primary);
+    color: var(--primary);
+    background: transparent;
+    border-radius: 50px;
     text-decoration: none;
-    padding: 16px 38px;
-    border-radius: 12px;
-    font-size: 18px;
     font-weight: 700;
+    font-size: 1rem;
+    transition: var(--transition);
     display: flex;
     align-items: center;
-    gap: 10px;
-    box-shadow: 0 10px 15px -3px rgba(16, 185, 129, 0.3);
-    transition: transform 0.2s, background-color 0.2s;
+    gap: 8px;
 }
 
-.btn-download:hover {
-    background-color: #059669;
+.btn-outline:hover {
+    background-color: var(--primary);
+    color: #fff;
     transform: translateY(-2px);
 }
 
-.icon {
-    display: inline-block;
-}
-
-.file-info {
-    font-size: 14px !important;
-    color: #718096 !important;
-}
-
-/* قسم المميزات */
-.features {
-    padding: 80px 0;
+/* القسم الرئيسي (Hero Section) */
+.hero {
+    padding: 180px 20px 120px;
     text-align: center;
-}
-
-.features h2 {
-    font-size: 32px;
-    color: #0f172a;
-    margin-bottom: 50px;
+    background: linear-gradient(180deg, #E8F7F7 0%, var(--bg-color) 100%);
     position: relative;
+    min-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.features h2::after {
-    content: '';
+.hero-logo {
+    width: 140px;
+    margin-bottom: 30px;
+    border-radius: 35px;
+    box-shadow: var(--shadow-lg);
+    animation: float 5s ease-in-out infinite;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    color: var(--primary-dark);
+    font-weight: 900;
+    margin-bottom: 24px;
+    max-width: 900px;
+    line-height: 1.3;
+    letter-spacing: -1px;
+}
+
+.hero p {
+    font-size: 1.3rem;
+    color: var(--text-light);
+    max-width: 700px;
+    margin: 0 auto 40px;
+}
+
+.btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background-color: var(--primary);
+    color: #fff;
+    padding: 18px 48px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 1.25rem;
+    font-weight: 800;
+    box-shadow: 0 15px 30px rgba(10, 147, 150, 0.25);
+    transition: var(--transition);
+}
+
+.btn-primary:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(10, 147, 150, 0.35);
+    background-color: var(--primary-dark);
+}
+
+.version-info {
     display: block;
-    width: 60px;
-    height: 4px;
-    background-color: #10b981;
-    margin: 10px auto 0 auto;
-    border-radius: 2px;
+    margin-top: 20px;
+    font-size: 1rem;
+    color: var(--text-light);
+    font-weight: 500;
 }
 
-.features-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-}
-
-.feature-card {
-    background: white;
-    padding: 35px 25px;
-    border-radius: 20px;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.03), 0 2px 4px -1px rgba(0, 0, 0, 0.02);
-    border: 1px solid #e6f4ea;
-    transition: transform 0.3s;
-}
-
-.feature-card:hover {
-    transform: translateY(-5px);
-}
-
-.feature-icon {
-    font-size: 40px;
-    margin-bottom: 15px;
-}
-
-.feature-card h3 {
-    color: #065f46;
-    margin-bottom: 15px;
-    font-size: 20px;
-    font-weight: 600;
-}
-
-.feature-card p {
-    color: #718096;
-    font-size: 15px;
-    text-align: justify;
-}
-
-/* الفوتر */
-footer {
-    background-color: #065f46;
-    color: #e6f4ea;
-    padding: 30px 0;
+/* قسم نبذة (About Section) */
+.about-section {
+    padding: 80px 20px;
+    background-color: var(--surface);
     text-align: center;
-    font-size: 14px;
 }
 
-/* التوافق التام مع الموبايل */
+.about-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-container h2 {
+    font-size: 2.2rem;
+    color: var(--primary-dark);
+    margin-bottom: 20px;
+    font-weight: 800;
+}
+
+.about-container p {
+    font-size: 1.2rem;
+    color: var(--text-light);
+}
+
+/* قسم المميزات (Features) */
+.features {
+    padding: 100px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+.section-header h2 {
+    font-size: 2.8rem;
+    color: var(--primary-dark);
+    font-weight: 900;
+    margin-bottom: 15px;
+}
+
+.section-header p {
+    font-size: 1.2rem;
+    color: var(--text-light);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+}
+
+.card {
+    background: var(--surface);
+    padding: 50px 40px;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid rgba(0,0,0,0.04);
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 4px;
+    background: var(--primary);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.4s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+}
+
+.card:hover::before {
+    transform: scaleX(1);
+}
+
+.icon-box {
+    width: 80px;
+    height: 80px;
+    background: rgba(10, 147, 150, 0.08);
+    color: var(--primary);
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+    transition: var(--transition);
+}
+
+.card:hover .icon-box {
+    background: var(--primary);
+    color: #fff;
+    transform: scale(1.05);
+}
+
+.card h3 {
+    font-size: 1.6rem;
+    color: var(--text-main);
+    margin-bottom: 16px;
+    font-weight: 800;
+}
+
+.card p {
+    color: var(--text-light);
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+/* دعوة للعمل (CTA Section) */
+.cta-section {
+    padding: 100px 20px;
+    background-color: var(--primary-dark);
+    text-align: center;
+    color: #fff;
+}
+
+.cta-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.cta-container h2 {
+    font-size: 2.5rem;
+    font-weight: 900;
+    margin-bottom: 20px;
+}
+
+.cta-container p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    opacity: 0.9;
+}
+
+.btn-light {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background-color: #fff;
+    color: var(--primary-dark);
+    padding: 18px 48px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 1.25rem;
+    font-weight: 800;
+    transition: var(--transition);
+}
+
+.btn-light:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* الفوتر (Footer) */
+footer {
+    background-color: #004554;
+    color: rgba(255, 255, 255, 0.7);
+    text-align: center;
+    padding: 40px 20px;
+    font-size: 1rem;
+}
+
+/* أنيميشن */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-12px); }
+    100% { transform: translateY(0px); }
+}
+
+/* التجاوب مع الشاشات (Responsive) */
 @media (max-width: 768px) {
-    .hero-content h1 {
-        font-size: 28px;
-        padding: 0 10px;
-    }
-    .hero-content p {
-        font-size: 16px;
-        padding: 0 15px;
-    }
-    .btn-download {
-        width: 90%;
-        justify-content: center;
-    }
-    .features-grid {
-        padding: 0 15px;
-    }
+    .hero h1 { font-size: 2.4rem; }
+    .hero p { font-size: 1.15rem; }
+    .btn-outline { display: none; }
+    .section-header h2 { font-size: 2.2rem; }
+    .cta-container h2 { font-size: 2rem; }
+    .card { padding: 40px 30px; }
 }
