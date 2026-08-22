@@ -2,7 +2,7 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>زادُ الخَيْر - رفيقك الإيماني الذكي</title>
     
     <!-- خط Tajawal -->
@@ -18,7 +18,10 @@
 </head>
 <body>
 
-    <!-- الخلفيات العصرية -->
+<!-- غلاف لمنع خروج أي عنصر عن الشاشة -->
+<div class="site-wrapper">
+
+    <!-- الخلفيات العصرية (ستختفي في الموبايل لمنع المشاكل) -->
     <div class="blob blob-1"></div>
     <div class="blob blob-2"></div>
 
@@ -49,23 +52,22 @@
                 </a>
             </div>
             <div class="hero-image-wrapper reveal delay-4">
-                <!-- يمكنك استبدال هذه الصورة لاحقاً بلقطة شاشة للتطبيق -->
                 <img src="logo.png" alt="واجهة زاد الخير" class="hero-image">
             </div>
         </div>
     </section>
 
-    <!-- قسم الشرح التفصيلي (Feature Highlight) -->
+    <!-- قسم الشرح التفصيلي -->
     <section class="feature-highlight">
         <div class="container">
             <div class="split-layout">
                 <div class="text-side reveal">
                     <h2>لماذا يختلف "زادُ الخَيْر"؟</h2>
-                    <p>في عصر مليء بالتطبيقات المزدحمة بالإعلانات والنوافذ المنبثقة، صممنا "زاد" ليكون الملاذ الهادئ. اعتمدنا على تقنيات تطوير متقدمة وقواعد بيانات محلية (Room DB) لضمان أن التطبيق يعمل بكفاءة قصوى حتى بدون اتصال بالإنترنت.</p>
+                    <p>في عصر مليء بالتطبيقات المزدحمة بالإعلانات، صممنا "زاد" ليكون الملاذ الهادئ. اعتمدنا على تقنيات تطوير متقدمة (Room DB) لضمان أن التطبيق يعمل بكفاءة قصوى حتى بدون اتصال بالإنترنت.</p>
                     <ul class="check-list">
                         <li><i class="fa-solid fa-circle-check"></i> استقلالية تامة عن الإنترنت للحفاظ على تركيزك.</li>
-                        <li><i class="fa-solid fa-circle-check"></i> خصوصية كاملة، بياناتك وأذكارك تُحفظ على هاتفك فقط.</li>
-                        <li><i class="fa-solid fa-circle-check"></i> تصميم مدروس لتقليل إجهاد العين أثناء القراءة الطويلة.</li>
+                        <li><i class="fa-solid fa-circle-check"></i> خصوصية كاملة، بياناتك تُحفظ على هاتفك فقط.</li>
+                        <li><i class="fa-solid fa-circle-check"></i> تصميم مدروس لتقليل إجهاد العين.</li>
                     </ul>
                 </div>
                 <div class="image-side reveal delay-2">
@@ -79,7 +81,7 @@
         </div>
     </section>
 
-    <!-- قسم الخدمات (Bento Grid) -->
+    <!-- قسم الخدمات -->
     <section class="services">
         <div class="container">
             <div class="section-title reveal">
@@ -92,59 +94,59 @@
                 <div class="bento-item item-large reveal">
                     <div class="bento-icon"><i class="fa-solid fa-clock"></i></div>
                     <h3>مواقيت صلاة ديناميكية</h3>
-                    <p>لا يكتفي التطبيق بعرض الأوقات بدقة، بل تتفاعل الواجهة بصرياً مع حالة السماء. ستلاحظ تغير الألوان لتعكس الشروق، الغروب، أو الليل، مع عد تنازلي دقيق ولحظي للصلاة القادمة لإبقائك متأهباً.</p>
+                    <p>لا يكتفي التطبيق بعرض الأوقات بدقة، بل تتفاعل الواجهة بصرياً مع حالة السماء (شروق، غروب، ليل)، مع عد تنازلي دقيق للحفاظ على تأهبك للعبادة.</p>
                 </div>
                 <!-- كارت 2 -->
                 <div class="bento-item reveal delay-1">
                     <div class="bento-icon"><i class="fa-solid fa-book-open-reader"></i></div>
                     <h3>أذكار بانتقال ذكي</h3>
-                    <p>تجربة قراءة أذكار الصباح والمساء لم تكن بهذه السهولة. التطبيق يحسب مرات التكرار تلقائياً وينقلك للذكر التالي فور الانتهاء.</p>
+                    <p>التطبيق يحسب مرات التكرار تلقائياً وينقلك للذكر التالي فور الانتهاء لضمان تركيزك.</p>
                 </div>
                 <!-- كارت 3 -->
                 <div class="bento-item reveal delay-2">
                     <div class="bento-icon"><i class="fa-solid fa-chart-line"></i></div>
                     <h3>تتبع الالتزام (Streaks)</h3>
-                    <p>نظام تحفيزي قوي يسجل أيام التزامك بالصلوات والأذكار، مما يشجعك على الحفاظ على سلسلتك الإيمانية وعدم الانقطاع.</p>
+                    <p>نظام تحفيزي قوي يسجل أيام التزامك، مما يشجعك على الحفاظ على سلسلتك الإيمانية وعدم الانقطاع.</p>
                 </div>
                 <!-- كارت 4 -->
-                <div class="bento-item item-wide reveal">
+                <div class="bento-item item-wide reveal delay-1">
                     <div class="bento-icon"><i class="fa-solid fa-fingerprint"></i></div>
-                    <h3>مسبحة إلكترونية بتفاعلات حسية (Haptic)</h3>
-                    <p>انسَ الحاجة للنظر إلى الشاشة أثناء الاستغفار. المسبحة المدمجة توفر اهتزازات خفيفة ومريحة مع كل ضغطة، لتضمن تركيزك التام في التسبيح مع حفظ تلقائي لتقدمك في أي وقت تخرج فيه من التطبيق.</p>
+                    <h3>مسبحة إلكترونية بتفاعلات حسية</h3>
+                    <p>انسَ الحاجة للنظر إلى الشاشة. المسبحة المدمجة توفر اهتزازات خفيفة ومريحة (Haptic Feedback) مع كل ضغطة، لتضمن تركيزك التام في التسبيح.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- قسم الأسئلة الشائعة (FAQ) -->
+    <!-- قسم الأسئلة الشائعة -->
     <section class="faq">
         <div class="container">
             <div class="section-title reveal">
                 <h2>أسئلة متكررة</h2>
-                <p>كل ما تود معرفته عن تطبيق زادُ الخَيْر</p>
+                <p>كل ما تود معرفته عن التطبيق</p>
             </div>
             <div class="faq-grid reveal delay-1">
                 <div class="faq-card">
                     <h4>هل التطبيق يحتوي على إعلانات؟</h4>
-                    <p>إطلاقاً. تطبيق زادُ الخَيْر مصمم ليكون لوجه الله، لا يحتوي على أي إعلانات مزعجة قد تقطع خشوعك أو تشتت انتباهك.</p>
+                    <p>إطلاقاً. زادُ الخَيْر مصمم ليكون لوجه الله، لا يحتوي على أي إعلانات مزعجة.</p>
                 </div>
                 <div class="faq-card">
                     <h4>هل أحتاج للإنترنت لاستخدامه؟</h4>
-                    <p>تحتاج للإنترنت مرة واحدة فقط لتحديد موقعك وضبط مواقيت الصلاة، بعدها يعمل التطبيق بالكامل بكفاءة تامة بدون إنترنت (Offline).</p>
+                    <p>تحتاج للإنترنت مرة واحدة لتحديد موقعك، بعدها يعمل التطبيق بالكامل بدون إنترنت.</p>
                 </div>
                 <div class="faq-card">
-                    <h4>ما حجم التطبيق؟ وهل يستهلك مساحة؟</h4>
-                    <p>حجم ملف التثبيت (APK) هو 16 ميجابايت فقط، وهو محسّن برمجياً ليكون خفيفاً جداً على جميع أجهزة الأندرويد.</p>
+                    <h4>ما حجم التطبيق؟</h4>
+                    <p>حجم التطبيق هو 16 ميجابايت فقط، وهو محسّن ليكون خفيفاً جداً على جميع الأجهزة.</p>
                 </div>
                 <div class="faq-card">
-                    <h4>كيف أحفظ تقدمي في المسبحة؟</h4>
-                    <p>لا تقلق، التطبيق يستخدم قواعد بيانات محلية ذكية تحفظ عدد التسبيحات والأذكار تلقائياً حتى لو أغلقت التطبيق فجأة.</p>
+                    <h4>كيف أحفظ تقدمي؟</h4>
+                    <p>التطبيق يستخدم قواعد بيانات محلية ذكية تحفظ تقدمك في الأذكار تلقائياً وفي نفس اللحظة.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- قسم التحميل النهائي (CTA) -->
+    <!-- قسم التحميل النهائي -->
     <section class="cta">
         <div class="container">
             <div class="cta-banner reveal">
@@ -166,7 +168,9 @@
         </div>
     </footer>
 
-    <!-- سكريبت الحركات التفاعلية (Scroll Animations) -->
+</div> <!-- نهاية الغلاف -->
+
+    <!-- سكريبت الحركات التفاعلية -->
     <script>
         function revealElements() {
             var reveals = document.querySelectorAll('.reveal');
@@ -174,8 +178,7 @@
             
             for (var i = 0; i < reveals.length; i++) {
                 var elementTop = reveals[i].getBoundingClientRect().top;
-                // العنصر يظهر عندما يدخل مساحة الشاشة بـ 80 بيكسل
-                var elementVisible = 80;
+                var elementVisible = 50;
                 
                 if (elementTop < windowHeight - elementVisible) {
                     reveals[i].classList.add('active');
@@ -184,7 +187,7 @@
         }
         
         window.addEventListener('scroll', revealElements);
-        revealElements(); // تشغيل الدالة فور تحميل الصفحة
+        revealElements(); 
     </script>
 </body>
 </html>
